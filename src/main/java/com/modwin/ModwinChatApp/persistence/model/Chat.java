@@ -21,8 +21,9 @@ public class Chat {
 
     private Set<User> users;
 
-    private List<Message> messages;
+    private List<Message> chatMessages;
 
-
-
+    @ManyToOne
+    @JoinColumn(name = "owner_user_id")
+    private User owner;
 }
